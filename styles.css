@@ -206,6 +206,7 @@ a {
 h1,
 h2,
 h3,
+h4,
 p {
   margin-top: 0;
 }
@@ -233,6 +234,14 @@ h3 {
   margin-bottom: 0.55rem;
   font-size: 1.06rem;
   line-height: 1.28;
+  letter-spacing: 0;
+}
+
+h4 {
+  margin-bottom: 0.58rem;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.34;
   letter-spacing: 0;
 }
 
@@ -285,8 +294,9 @@ h3 {
 }
 
 .summary-band {
-  background: var(--teal-deep);
-  color: #ffffff;
+  background: var(--sage);
+  color: var(--ink);
+  border-block: 1px solid rgba(36, 48, 47, 0.08);
 }
 
 .summary-grid {
@@ -295,7 +305,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(36, 48, 47, 0.08);
 }
 
 .summary-grid > div {
@@ -304,7 +314,7 @@ h3 {
   align-content: center;
   gap: 0.16rem;
   padding: 1.4rem clamp(1rem, 3vw, 2rem);
-  background: var(--teal-deep);
+  background: var(--sage);
 }
 
 .summary-value {
@@ -315,7 +325,7 @@ h3 {
 
 .summary-label {
   max-width: 20rem;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--muted);
   font-size: 0.94rem;
 }
 
@@ -330,6 +340,8 @@ h3 {
 }
 
 .themes-section,
+.areas-section,
+.biophysics-section,
 .teaching-section {
   background: #ffffff;
 }
@@ -393,11 +405,44 @@ h3 {
   gap: 1rem;
 }
 
+.area-grid {
+  width: min(var(--max), 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
 .theme-card,
+.area-card,
+.work-card,
+.consciousness-panel,
 .publication {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper-strong);
+}
+
+.area-card {
+  min-height: 25rem;
+  display: grid;
+  align-content: start;
+  gap: 0.8rem;
+  padding: 1.45rem;
+}
+
+.area-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.area-tag {
+  color: var(--coral);
+  font-size: 0.76rem;
+  font-weight: 840;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0;
 }
 
 .theme-card {
@@ -425,6 +470,9 @@ h3 {
 }
 
 .theme-card p,
+.area-card p,
+.work-card p,
+.consciousness-panel p,
 .publication p,
 .timeline-item p {
   color: var(--muted);
@@ -457,6 +505,101 @@ h3 {
 
 .timeline-item p {
   margin-bottom: 0;
+}
+
+.trajectory-narrative {
+  width: min(900px, 100%);
+  margin: 0 auto 3rem;
+  color: var(--muted);
+  font-size: 1.06rem;
+}
+
+.trajectory-narrative p {
+  margin-bottom: 1.1rem;
+}
+
+.trajectory-narrative p:last-child {
+  margin-bottom: 0;
+}
+
+.work-section {
+  width: min(var(--max), 100%);
+  margin: 0 auto;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(36, 48, 47, 0.14);
+}
+
+.work-section + .work-section {
+  margin-top: 3rem;
+}
+
+.work-heading {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 1.3rem;
+}
+
+.work-heading span {
+  color: var(--coral);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.work-heading h3 {
+  margin-bottom: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.55rem, 2.8vw, 2.45rem);
+  font-weight: 540;
+  line-height: 1.12;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.work-card {
+  padding: 1.25rem;
+}
+
+.work-card.featured-work {
+  border-color: rgba(11, 124, 114, 0.3);
+  background: linear-gradient(135deg, #ffffff, rgba(237, 245, 242, 0.8));
+}
+
+.work-card p:last-child {
+  margin-bottom: 0;
+}
+
+.consciousness-layout {
+  width: min(var(--max), 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.consciousness-panel {
+  padding: clamp(1.4rem, 3vw, 2rem);
+}
+
+.consciousness-panel h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.45rem, 2.5vw, 2.1rem);
+  font-weight: 540;
+}
+
+.consciousness-panel p:last-child {
+  margin-bottom: 0;
+}
+
+.accent-panel {
+  border-color: rgba(216, 95, 67, 0.25);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(250, 238, 228, 0.58));
 }
 
 .publication-list {
@@ -539,7 +682,10 @@ h3 {
 }
 
 @media (max-width: 960px) {
+  .area-grid,
   .theme-grid,
+  .work-list,
+  .consciousness-layout,
   .publication-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -617,9 +763,21 @@ h3 {
   }
 
   .summary-grid,
+  .area-grid,
   .theme-grid,
+  .work-list,
+  .consciousness-layout,
   .publication-list {
     grid-template-columns: 1fr;
+  }
+
+  .area-card {
+    min-height: auto;
+  }
+
+  .work-heading {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
   }
 
   .timeline-item {
