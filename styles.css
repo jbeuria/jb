@@ -293,42 +293,6 @@ h4 {
   color: var(--ink);
 }
 
-.summary-band {
-  background: var(--sage);
-  color: var(--ink);
-  border-block: 1px solid rgba(36, 48, 47, 0.08);
-}
-
-.summary-grid {
-  width: min(var(--max), calc(100% - 2rem));
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1px;
-  background: rgba(36, 48, 47, 0.08);
-}
-
-.summary-grid > div {
-  min-height: 8.75rem;
-  display: grid;
-  align-content: center;
-  gap: 0.16rem;
-  padding: 1.4rem clamp(1rem, 3vw, 2rem);
-  background: var(--sage);
-}
-
-.summary-value {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2rem, 5vw, 3.8rem);
-  line-height: 1;
-}
-
-.summary-label {
-  max-width: 20rem;
-  color: var(--muted);
-  font-size: 0.94rem;
-}
-
 .section {
   padding: clamp(4.5rem, 8vw, 7rem) clamp(1.1rem, 5vw, 4rem);
 }
@@ -942,7 +906,6 @@ h4 {
     font-size: clamp(3.2rem, 14vw, 4.25rem);
   }
 
-  .summary-grid,
   .area-grid,
   .theme-grid,
   .work-list,
