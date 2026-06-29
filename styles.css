@@ -417,7 +417,8 @@ h4 {
 .area-card,
 .work-card,
 .consciousness-panel,
-.credential-panel {
+.credential-panel,
+.activity-panel {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper-strong);
@@ -474,6 +475,8 @@ h4 {
 .work-card p,
 .consciousness-panel p,
 .credential-item p,
+.activity-block p,
+.activity-list li,
 .timeline-item p {
   color: var(--muted);
 }
@@ -730,6 +733,90 @@ h4 {
   content: "";
 }
 
+.activity-panel {
+  width: min(var(--max), 100%);
+  margin: 1rem auto 0;
+  padding: clamp(1.35rem, 2.6vw, 1.8rem);
+}
+
+.activity-panel h3 {
+  margin-bottom: 1.25rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.4rem, 2.3vw, 1.95rem);
+  font-weight: 540;
+}
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 1rem 1.35rem;
+}
+
+.activity-block {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(36, 48, 47, 0.1);
+}
+
+.activity-book {
+  grid-column: 1 / -1;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.activity-block h4 {
+  margin-bottom: 0.55rem;
+  color: var(--coral);
+  font-size: 0.78rem;
+  font-weight: 840;
+  text-transform: uppercase;
+}
+
+.activity-block p {
+  max-width: 980px;
+  margin-bottom: 0;
+  font-size: 0.94rem;
+}
+
+.activity-block a {
+  color: var(--teal-deep);
+  font-weight: 720;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+.activity-list {
+  display: grid;
+  gap: 0.72rem;
+  margin: 0;
+  padding-left: 1.05rem;
+}
+
+.activity-list li {
+  padding-left: 0.15rem;
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+.grant-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.grant-list li {
+  display: grid;
+  gap: 0.15rem;
+  padding-left: 0;
+}
+
+.grant-list strong {
+  color: var(--ink);
+  font-size: 0.96rem;
+}
+
+.grant-list span {
+  display: block;
+}
+
 .contact-panel {
   align-items: center;
   padding: clamp(2rem, 5vw, 3.4rem);
@@ -860,7 +947,8 @@ h4 {
   .theme-grid,
   .work-list,
   .consciousness-layout,
-  .credentials-grid {
+  .credentials-grid,
+  .activity-grid {
     grid-template-columns: 1fr;
   }
 
